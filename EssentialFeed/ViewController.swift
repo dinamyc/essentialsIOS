@@ -8,12 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var elements = [2, 3, 4, 6]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        elements.append(73)
+        print(elements)
     }
-
-
 }
 
