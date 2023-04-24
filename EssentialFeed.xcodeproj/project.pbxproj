@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7905D07E29F6D4CF005A093C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA63629ED5635008601CB /* FeedItem.swift */; };
+		7905D07F29F6D4E7005A093C /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA63A29ED6F9C008601CB /* RemoteFeedLoader.swift */; };
+		7905D08029F6D4EB005A093C /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA63529ED5635008601CB /* FeedLoader.swift */; };
+		7905D08129F6D4EC005A093C /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA63529ED5635008601CB /* FeedLoader.swift */; };
+		7905D08229F6D4EE005A093C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA63629ED5635008601CB /* FeedItem.swift */; };
 		79151C6B29ED300C00F8A06D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79151C6A29ED300C00F8A06D /* AppDelegate.swift */; };
 		79151C6D29ED300C00F8A06D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79151C6C29ED300C00F8A06D /* SceneDelegate.swift */; };
 		79151C6F29ED300C00F8A06D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79151C6E29ED300C00F8A06D /* ViewController.swift */; };
@@ -284,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7905D08029F6D4EB005A093C /* FeedLoader.swift in Sources */,
+				7905D07E29F6D4CF005A093C /* FeedItem.swift in Sources */,
 				79151C6F29ED300C00F8A06D /* ViewController.swift in Sources */,
 				79151C6B29ED300C00F8A06D /* AppDelegate.swift in Sources */,
+				7905D07F29F6D4E7005A093C /* RemoteFeedLoader.swift in Sources */,
 				79151C6D29ED300C00F8A06D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +304,8 @@
 			files = (
 				79FEA63829ED5674008601CB /* RemoteFeedLoaderTest.swift in Sources */,
 				79FEA63B29ED6F9C008601CB /* RemoteFeedLoader.swift in Sources */,
+				7905D08129F6D4EC005A093C /* FeedLoader.swift in Sources */,
+				7905D08229F6D4EE005A093C /* FeedItem.swift in Sources */,
 				79151C8229ED300E00F8A06D /* EssentialFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
