@@ -26,50 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
-      <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;">
-            </ActionContent>
-         </ExecutionAction>
-      </PreActions>
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79151C7C29ED300E00F8A06D"
-               BuildableName = "EssentialFeedTests.xctest"
-               BlueprintName = "EssentialFeedTests"
-               ReferencedContainer = "container:EssentialFeed.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "79151C8629ED300E00F8A06D"
-               BuildableName = "EssentialFeedUITests.xctest"
-               BlueprintName = "EssentialFeedUITests"
-               ReferencedContainer = "container:EssentialFeed.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7977CBF42A13A0C200C35EF6"
-               BuildableName = "EssentialFeedAPIEndToEndTests.xctest"
-               BlueprintName = "EssentialFeedAPIEndToEndTests"
-               ReferencedContainer = "container:EssentialFeed.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:CI.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
