@@ -1,6 +1,6 @@
 //
-//  EssentialFeedAPIEndToEndTests.swift
-//  EssentialFeedAPIEndToEndTests
+//  EssentialFeedEndToEndTests.swift
+//  EssentialFeedEndToEndTests
 //
 //  Created by Jose Luis Enriquez on 22/05/2023.
 //
