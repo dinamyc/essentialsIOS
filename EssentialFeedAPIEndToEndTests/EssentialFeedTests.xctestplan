@@ -1,10 +1,10 @@
 {
   "configurations" : [
     {
-      "id" : "CB8C8326-E2CE-4DCB-830B-3A2EBC708671",
-      "name" : "Configuration 1",
+      "id" : "FBABC038-C734-4459-8CF4-F557B46AFCB5",
+      "name" : "RandomizeExecution",
       "options" : {
-
+        "testExecutionOrdering" : "random"
       }
     }
   ],
@@ -12,13 +12,6 @@
 
   },
   "testTargets" : [
-    {
-      "target" : {
-        "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "7977CBF42A13A0C200C35EF6",
-        "name" : "EssentialFeedAPIEndToEndTests"
-      }
-    },
     {
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
