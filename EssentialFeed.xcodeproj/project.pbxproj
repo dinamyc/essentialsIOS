@@ -22,6 +22,7 @@
 		795DDA582A1C003D00420F31 /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDA572A1C003D00420F31 /* EssentialFeedAPIEndToEndTests.swift */; };
 		795DDA592A1C003D00420F31 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795DDA1D2A1BFCA500420F31 /* EssentialFeed.framework */; };
 		795DDA5F2A1C008600420F31 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDA492A1BFDB200420F31 /* XCTestCase+MemoryLeakTracking.swift */; };
+		7981CBEF2A26172300E73AC5 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981CBEE2A26172300E73AC5 /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		795DDA552A1C003D00420F31 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		795DDA572A1C003D00420F31 /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		795DDA602A1C02FA00420F31 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
+		7981CBEE2A26172300E73AC5 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				795DDA492A1BFDB200420F31 /* XCTestCase+MemoryLeakTracking.swift */,
+				7981CBEE2A26172300E73AC5 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7981CBEF2A26172300E73AC5 /* SharedTestHelpers.swift in Sources */,
 				795DDA4A2A1BFDB200420F31 /* RemoteFeedLoaderTest.swift in Sources */,
 				795DDA4C2A1BFDB200420F31 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				795DDA4B2A1BFDB200420F31 /* URLSessionHTTPClientTest.swift in Sources */,
