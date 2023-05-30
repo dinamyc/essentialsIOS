@@ -11,42 +11,23 @@
 		</dict>
 		<key>EssentialFeed.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>EssentialFeedTests.xcscheme_^#shared#^_</key>
+		<key>EssentialFeedAPIEndToEndTests.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>79151C6629ED300C00F8A06D</key>
+		<key>795DDA1C2A1BFCA500420F31</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79151C7C29ED300E00F8A06D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>79151C8629ED300E00F8A06D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>79BC70062A1BF410009A8540</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>79D79F562A1B8B980084B071</key>
+		<key>795DDA262A1BFCA500420F31</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,10 +1,10 @@
 {
   "configurations" : [
     {
-      "id" : "FBABC038-C734-4459-8CF4-F557B46AFCB5",
-      "name" : "RandomizeExecution",
+      "id" : "FFFFF87B-0C48-41E8-9415-A71FE49AA94A",
+      "name" : "Test Scheme Action",
       "options" : {
-        "testExecutionOrdering" : "random"
+
       }
     }
   ],
@@ -13,7 +13,7 @@
       "targets" : [
         {
           "containerPath" : "container:EssentialFeed.xcodeproj",
-          "identifier" : "79151C6629ED300C00F8A06D",
+          "identifier" : "795DDA1C2A1BFCA500420F31",
           "name" : "EssentialFeed"
         }
       ]
@@ -21,9 +21,10 @@
   },
   "testTargets" : [
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "79151C7C29ED300E00F8A06D",
+        "identifier" : "795DDA262A1BFCA500420F31",
         "name" : "EssentialFeedTests"
       }
     }
