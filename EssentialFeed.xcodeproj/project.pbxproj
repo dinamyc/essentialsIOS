@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7929444F2A29E437005E3A20 /* CacheFeedUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929444E2A29E437005E3A20 /* CacheFeedUseCaseTest.swift */; };
 		795DDA222A1BFCA500420F31 /* EssentialFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = 795DDA212A1BFCA500420F31 /* EssentialFeed.docc */; };
 		795DDA282A1BFCA500420F31 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795DDA1D2A1BFCA500420F31 /* EssentialFeed.framework */; };
 		795DDA2E2A1BFCA500420F31 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 795DDA202A1BFCA500420F31 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7929444E2A29E437005E3A20 /* CacheFeedUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTest.swift; sourceTree = "<group>"; };
 		795DDA1D2A1BFCA500420F31 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		795DDA202A1BFCA500420F31 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		795DDA212A1BFCA500420F31 /* EssentialFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EssentialFeed.docc; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7929444D2A29E408005E3A20 /* Feed Cache */ = {
+			isa = PBXGroup;
+			children = (
+				7929444E2A29E437005E3A20 /* CacheFeedUseCaseTest.swift */,
+			);
+			path = "Feed Cache";
+			sourceTree = "<group>";
+		};
 		795DDA132A1BFCA500420F31 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		795DDA2B2A1BFCA500420F31 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				7929444D2A29E408005E3A20 /* Feed Cache */,
 				795DDA452A1BFDB200420F31 /* Feed API */,
 			);
 			path = EssentialFeedTests;
@@ -332,6 +343,7 @@
 			files = (
 				7981CBEF2A26172300E73AC5 /* SharedTestHelpers.swift in Sources */,
 				795DDA4A2A1BFDB200420F31 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
+				7929444F2A29E437005E3A20 /* CacheFeedUseCaseTest.swift in Sources */,
 				795DDA4C2A1BFDB200420F31 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				795DDA4B2A1BFDB200420F31 /* URLSessionHTTPClientTest.swift in Sources */,
 			);
