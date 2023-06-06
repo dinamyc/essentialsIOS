@@ -25,6 +25,7 @@
 		795DDA5F2A1C008600420F31 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795DDA492A1BFDB200420F31 /* XCTestCase+MemoryLeakTracking.swift */; };
 		7981CBEF2A26172300E73AC5 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981CBEE2A26172300E73AC5 /* SharedTestHelpers.swift */; };
 		79D1EF062A2F419400623D46 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EF052A2F419400623D46 /* LocalFeedLoader.swift */; };
+		79D1EF082A2F424A00623D46 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EF072A2F424A00623D46 /* FeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		795DDA602A1C02FA00420F31 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		7981CBEE2A26172300E73AC5 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		79D1EF052A2F419400623D46 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
+		79D1EF072A2F424A00623D46 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				79D1EF052A2F419400623D46 /* LocalFeedLoader.swift */,
+				79D1EF072A2F424A00623D46 /* FeedStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D1EF082A2F424A00623D46 /* FeedStore.swift in Sources */,
 				795DDA432A1BFD7000420F31 /* FeedLoader.swift in Sources */,
 				795DDA3F2A1BFD1C00420F31 /* FeedItemsMapper.swift in Sources */,
 				795DDA3C2A1BFD1C00420F31 /* HTTPClient.swift in Sources */,
