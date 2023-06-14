@@ -57,10 +57,15 @@ class CodableFeedStore {
     }
     
     func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping FeedStore.InsertionCompletion) {
-        let encoder = JSONEncoder()
-        let encoded = try! encoder.encode(Cache(feed: feed.map(CodableFeedimage.init), timestamp: timestamp))
-        try! encoded.write(to: storeURL)
-        completion(nil)
+        do {
+            let encoder = JSONEncoder()
+            let cache = Cache(feed: feed.map(CodableFeedimage.init), timestamp: timestamp)
+            let encoded = try encoder.encode(cache)
+            try encoded.write(to: storeURL)
+            completion(nil)
+        } catch  {
+            completion(error)
+        }
     }
 }
 
@@ -114,22 +119,22 @@ class CodableFeedStoreTests: XCTestCase {
     func test_retrieve_deliversFailureOnRetrievalError() {
         let storeURL = testSpecificStoreURL()
         let sut = makeSUT(storeURL: storeURL)
-    
+        
         try! "invalid data".write(to: storeURL, atomically: false, encoding: .utf8)
-         
+        
         expect(sut, toRetrieve: .failure(anyNSError()))
     }
     
     func test_retrieve_hasNoSideEffectsOnFailure() {
         let storeURL = testSpecificStoreURL()
         let sut = makeSUT(storeURL: storeURL)
-    
+        
         try! "invalid data".write(to: storeURL, atomically: false, encoding: .utf8)
         
         expect(sut, toRetrieveTwice: .failure(anyNSError()))
     }
     
-    func test_retrieve_overridesPreviouslyInsertedCacheValues() {
+    func test_insert_overridesPreviouslyInsertedCacheValues() {
         let sut = makeSUT()
         
         let firstInsertionError = insert((uniqueImageFeed().local, Date()), to: sut)
@@ -143,6 +148,18 @@ class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetrieve: .found(feed: latestFeed, timestamp: latestTimestamp))
     }
     
+    func test_insert_deliversErrorOnInsertionError() {
+        let invalidStoreURL = URL(string: "invalid://store-url")!
+        let sut = makeSUT(storeURL: invalidStoreURL)
+        let feed = uniqueImageFeed().local
+        let timestamp = Date()
+        
+        let insertionError = insert((feed, timestamp), to: sut)
+        
+        XCTAssertNotNil(insertionError, "Expected cache insertion to fail with an error")
+        expect(sut, toRetrieve: .empty)
+    }
+    
     // - MARK: Helpers
     
     private func makeSUT(storeURL: URL? = nil, file: StaticString = #file, line: UInt = #line) -> CodableFeedStore {
@@ -153,14 +170,12 @@ class CodableFeedStoreTests: XCTestCase {
     
     @discardableResult
     private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore) -> Error? {
-        let exp = expectation(description: "wait for cache insertion")
+        let exp = expectation(description: "Wait for cache insertion")
         var insertionError: Error?
-        
         sut.insert(cache.feed, timestamp: cache.timestamp) { receivedInsertionError in
             insertionError = receivedInsertionError
             exp.fulfill()
         }
-        
         wait(for: [exp], timeout: 1.0)
         return insertionError
     }
@@ -175,7 +190,8 @@ class CodableFeedStoreTests: XCTestCase {
         
         sut.retrieve { retrievedResult in
             switch (expectedResult, retrievedResult) {
-            case (.empty, .empty), (.failure, .failure):
+            case (.empty, .empty),
+                (.failure, .failure):
                 break
                 
             case let (.found(expected), .found(retrieved)):
@@ -192,19 +208,19 @@ class CodableFeedStoreTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
-    private func testSpecificStoreURL() -> URL {
-        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("\(type(of: self)).store")
+    private func setupEmptyStoreState() {
+        deleteStoreArtifacts()
     }
     
     private func undoStoreSideEffects() {
         deleteStoreArtifacts()
     }
     
-    private func setupEmptyStoreState() {
-        deleteStoreArtifacts()
-    }
-    
     private func deleteStoreArtifacts() {
         try? FileManager.default.removeItem(at: testSpecificStoreURL())
+    }
+    
+    private func testSpecificStoreURL() -> URL {
+        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("\(type(of: self)).store")
     }
 }
